@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+
+    <style>
+        .main {
+            background-color: bisque;
+            width: 80vh;
+            height: 80vw;
+
+        }
+
+        .box {
+            background-color: aliceblue;
+            width: 10vh;
+            height: 10vw;
+            /*  animation-name: niraj;
+            animation-duration: 3s;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-delay: 0s;
+            animation-direction: alternate-reverse;
+            animation-play-state: paused;*/
+
+
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+
+            animation: niraj1 1s ease-in 0s,
+                        niraj2 1s ease-in 0s;
+        }
+
+        @keyframes niraj {
+            from {}
+
+            to {
+                transform: translateX(400px);
+            }
+        }
+
+        @keyframes niraj1 {
+            from {
+                background-color: black;
+            }
+
+            to {
+                background-color: azure;
+            }
+
+        }
+
+        @keyframes niraj2 {
+            0% {
+                transform: rotate(100deg);
+            }
+
+            20% {
+                transform: rotate(200deg);
+            }
+
+            50% {
+                transform: rotate(220deg);
+            }
+
+            80% {
+                transform: rotate(300deg);
+            }
+
+            100% {
+                transform: rotate(310deg);
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
